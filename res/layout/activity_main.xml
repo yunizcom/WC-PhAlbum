@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads= "http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/mainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher" />
+            
+            <!-- <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose the photo book :"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:textAppearance="?android:attr/textAppearanceLarge" /> -->
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadURLBtn"
+                android:textStyle="bold"
+                android:text="Open Photo Album" />
+            
+            <!-- <Button
+                android:id="@+id/button1b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadURLBtn2"
+                android:textStyle="bold"
+                android:text="Photo Album B class" /> -->
+            
+            <Button
+                android:id="@+id/button1a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="loadOldURLBtn"
+                android:text="Continue From Previous" />
+
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:text="Disclaimer : We do not own any of the photos, they are belonging to their original owner. User not allow to download nor save any of the photos."
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="10dp" />
+
+    </RelativeLayout>    
+    
+    <RelativeLayout
+        android:id="@+id/loadBoard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true" >
+
+        <!--  <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="80dp" >-->
+	        <LinearLayout
+	            android:id="@+id/loadPosts"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignParentTop="true"
+	            android:layout_marginBottom="40dp"
+	            android:orientation="vertical" >
+	        </LinearLayout>
+        <!-- </ScrollView> -->
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="newBlogBtn"
+            android:text="Menu" />
+
+        <Button
+            android:id="@+id/button3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/editText1"
+            android:onClick="prevURLBtn"
+            android:text="Prev" />
+
+        <Button
+            android:id="@+id/button4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="nextURLBtn"
+            android:text="Next" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/button4"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:inputType="number" />
+        
+    </RelativeLayout>  
+    
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#333333"
+            android:text="Connecting to server..."
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+    </RelativeLayout>
+    
+    <com.google.ads.AdView 
+	        android:id="@+id/adView" 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true" 
+	        android:layout_alignParentBottom="true" 
+	        ads:adSize="SMART_BANNER" 
+	        ads:adUnitId="a1527398855ce7522" 
+	        ads:loadAdOnCreate="true" > 
+	    </com.google.ads.AdView> 
+
+</RelativeLayout>
